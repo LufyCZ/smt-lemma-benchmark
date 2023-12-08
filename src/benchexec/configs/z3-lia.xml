@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<!--
+This file is part of BenchExec, a framework for reliable benchmarking:
+https://github.com/sosy-lab/benchexec
+
+SPDX-FileCopyrightText: 2007-2020 Dirk Beyer <https://www.sosy-lab.org>
+
+SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE benchmark PUBLIC "+//IDN sosy-lab.org//DTD BenchExec benchmark 2.3//EN" "https://www.sosy-lab.org/benchexec/benchmark-2.2.3dtd">
+<!-- Z3 LIA -->
+<benchmark tool="z3"
+           timelimit="10s"
+           hardtimelimit="20s"
+           memlimit="2048 MB"
+           cpuCores="1">
+
+  <!-- <rundefinition> defines tool configurations to benchmark.-->
+  <rundefinition name="def">
+  </rundefinition> 
+
+  <rundefinition name="lia1">
+    <option name="smt.arith.solver=2"></option>
+    <option name="smt.auto_config=false"></option>
+  </rundefinition>
+
+  <rundefinition name="lia2">
+    <option name="tactic.solve_eqs.max_occs=4"></option>
+    <option name="smt.arith.solver=2"></option>
+    <option name="smt.auto_config=false"></option>
+ </rundefinition>
+
+  <rundefinition name="eq1">
+    <option name="tactic.solve_eqs.max_occs=4"></option>
+  </rundefinition>
+
+  <rundefinition name="eq2">
+    <option name="tactic.solve_eqs.max_occs=4"></option>
+    <option name="tactic.solve_eqs.context_solve=true"></option>
+  </rundefinition>
+
+  <rundefinition name="lia1-6">
+    <option name="smt.arith.solver=6"></option>
+    <option name="smt.auto_config=false"></option>
+  </rundefinition>
+
+  <rundefinition name="lia2-6">
+    <option name="smt.arith.solver=6"></option>
+    <option name="smt.auto_config=false"></option>
+    <option name="tactic.solve_eqs.max_occs=4"></option>
+  </rundefinition>
+
+  <tasks name="lia">
+  </tasks>
+</benchmark>
