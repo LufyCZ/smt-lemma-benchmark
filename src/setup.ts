@@ -39,6 +39,11 @@ import {
 import { mdLemmaXStockCounts } from "./markdown/lemmaXStockCounts.js";
 import { addRuntimes, getRuntimes } from "./data/getRuntime.js";
 import { mdRuntimes } from "./markdown/runtime.js";
+import { mdLemmaXStockTimes } from "./markdown/lemmaXStockTimes.js";
+import {
+  getAllLemmaXStockTimes,
+  getLemmaXStockTimes,
+} from "./data/getLemmaXStockTimes.js";
 
 const flags = {
   // Generate formulas with lemmas
@@ -50,11 +55,6 @@ const flags = {
 };
 
 import { config } from "../benchmarks/example/config.js";
-import { mdLemmaXStockTimes } from "./markdown/lemmaXStockTimes.js";
-import {
-  getAllLemmaXStockTimes,
-  getLemmaXStockTimes,
-} from "./data/getLemmaXStockTimes.js";
 
 const configs = [config];
 
